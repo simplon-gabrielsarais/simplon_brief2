@@ -22,7 +22,7 @@ flowchart TB
 # Liste des ressources
 
 * 1 Réseau virtuel
-* 4 interfaces réseau
+* 4 interfaces réseaux
 * 1 adresse IP publique
 * Gateway
 * 3 Machines virtuelles
@@ -36,12 +36,12 @@ flowchart TB
 2. Création des interfaces réseaux
 3. Attributions des adresses IP privés.
 4. Création d'une IP publiques
-5. Création et configuration de la machine virtuelle Admnin
+5. Création et configuration de la machine virtuelle Admin
 6. Création et configuration de la machine virtuelle du serveur d'application
-7. Création de machine virtuelle de la base de donnée
+7. Création de machine virtuelle de la base de données
 8. Création de la passerelle
 9. Attribution des cartes réseaux sur les VM respectives
-10. Installer sur le serveur d'application les outils nécessaire au bon fonctionnement de nextcloud (PHP,APACHE...):
+10. Installer sur le serveur d'application les outils nécessaires au bon fonctionnement de nextcloud (PHP,APACHE...):
 
 
 | Serveur Admin | serveur Application | Seveur BDD |
