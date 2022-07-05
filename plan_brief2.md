@@ -3,11 +3,13 @@
 flowchart TB
     subgraph AZR [AZURE]
         subgraph Admin [Serveur Administration]
-            IntPu[Interface]
+            IntPuAd[Interface]
             IntLoAd[Interface Local]
         end
         subgraph App [Server Application]
+        IntPuApp[Interface]
         IntLoApp[Interface local]
+        
         end
         subgraph Bdd [Server Base de données]
         IntLoBdd[Interface local]
@@ -15,16 +17,18 @@ flowchart TB
     end
     Vnet{Vnet}
     IntLoAd & IntLoApp & IntLoBdd <--10.0.1.0/24--> Vnet
-    www((WWW)) <--> IntPu
-    U1{{Utilisateur 1}} & U2{{ Utilisateur 2}} <--> www
+    Http((Http)) <--port: 10080--> IntPuApp
+    U1{{Utilisateur 1}} & U2{{ Utilisateur 2}} <--ip publique 2--> Http
+    ssh((ssh))<--port: 10022-->IntPuAd
+    admin[Administrateur]--ip publique 1-->ssh
 ```
 
 # Liste des ressources
 
 * 1 Réseau virtuel
-* 4 interfaces réseaux
-* 1 adresse IP publique
-* Gateway
+* 5 interfaces réseaux
+* 2 adresse IP publique
+* 2 Gateways
 * 3 Machines virtuelles
     * bdd : E2s_V3
     * app : F2s_v2
@@ -44,7 +48,7 @@ flowchart TB
 7. Création de machine virtuelle de la base de données
 8. Création de la passerelle
 9. Attribution des cartes réseaux sur les VM respectives
-10. Installer sur le serveur d'application les outils nécessaires au bon fonctionnement de nextcloud (PHP,APACHE...):
+10. Installer et configurer les outils nécessaires au bon fonctionnement de nextcloud sur le serveur d'application:
 
 
 | Serveur Admin | serveur Application | Seveur BDD |
