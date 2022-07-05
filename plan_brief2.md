@@ -14,9 +14,11 @@ flowchart TB
         subgraph Bdd [Server Base de données]
         IntLoBdd[Interface local]
         end
-        Vnet{Vnet}
+        Vnet{Vnet \n 10.0.1.0/24}
     end
-    IntLoAd & IntLoApp & IntLoBdd <--10.0.1.0/24--> Vnet
+    IntLoAd <--> Vnet
+    IntLoApp <--> Vnet
+    IntLoBdd <--> Vnet
     Http((Http)) <--port: 10080--> IntPuApp
     U1{{Utilisateur 1}} & U2{{ Utilisateur 2}} <--ip publique 2--> Http
     ssh((ssh))<--port: 10022-->IntPuAd
