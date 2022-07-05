@@ -26,6 +26,9 @@ flowchart TB
 * 1 adresse IP publique
 * Gateway
 * 3 Machines virtuelles
+    * bdd : E2s_V3
+    * app : F2s_v2
+    * admin : DS2_V2
 * Domain App services
 * Compte de stockage
 
