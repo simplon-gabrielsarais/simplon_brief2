@@ -53,3 +53,5 @@ flowchart TB
 |  | PHP | MariaDB |
 |  | nginx |  |
 |  | Nextcloud |  |
+
+11. Configurer IpTable pour router les connexions des serveurs
