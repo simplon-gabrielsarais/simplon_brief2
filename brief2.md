@@ -800,13 +800,13 @@ flowchart TB
     IntLoAd <--10.0.1.7 \n ssh port: 22--> SR1
     IntLoApp <--10.0.1.5 \n ssh port: 22--> SR1
     IntLoBdd <--10.0.1.6 \n ss port: 22 \n MariaDB port: 3606--> SR1
-    Http((Http)) <--port: 10080--> SR3<-->IntPuApp
+    Http((Http)) <--port: 8080--> SR3<-->IntPuApp
     U1{{Utilisateur 1}} & U2{{ Utilisateur 2}} <--ip publique 2--> Http
     U3{{Utilisateur 3}} & U4{{ Utilisateur 4}} <--ip publique 2--> Https<--port: 443-->SR3
     ssh((ssh))<--port: 10022-->SR2<-->IntPuAd
     admin[Administrateur]--ip publique 1-->ssh
 ```
-### 14.2 cccc
+### 14.2 ressources serveurs
 |     **VMs**      |                          |       **Administrateur**        |         **Application**         |       **Base de Données**       |
 |:----------------:|:------------------------:|:-------------------------------:|:-------------------------------:|:-------------------------------:|
 | **Nom standard** |                          |             DS1 v2              |             DS3 v2              |             E4BS v5             |
