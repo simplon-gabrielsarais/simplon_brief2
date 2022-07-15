@@ -76,8 +76,6 @@
       - [14.3.2 Listes des applications sur le serveur application.](#1432-listes-des-applications-sur-le-serveur-application)
       - [14.3.3 Liste des applications installées sur le serveur BDD.](#1433-liste-des-applications-install-es-sur-le-serveur-bdd)
 
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
-
 
 ## 1 Création du groupe de ressource.
 ### 1.1 Choisir "Groupes de ressources" dans le menu.
